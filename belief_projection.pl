@@ -1,4 +1,4 @@
-/**
+/** <module> Projection of Extensional Belief
 
 This file is a Prolog implementation of the projection methods and
 examples for a Situation Calculus framework of an agent whose actions
@@ -21,8 +21,7 @@ x86_64-linux).
 
 @author  Jens Claßen
 @license GPLv2
-
-**/
+*/
 
 :- op(800, xfy, &).   % Conjunction 
 :- op(850, xfy, v).   % Disjunction 

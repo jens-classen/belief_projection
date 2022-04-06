@@ -147,7 +147,7 @@ holds(-all(V,P),S) :- !, holds(some(V,-P),S).
 holds(-some(V,P),S) :- !, not(holds(some(V,P),S)).
 holds(-P,S) :- !, not(holds(P,S)).
 holds(all(V,P),S) :- !, holds(-some(V,-P),S).
-holds(some(V,P),S) :- !, sub(V,_,P,P1), holds(P1,S).
+holds(some(V,P),S) :- !, subv(V,_,P,P1), holds(P1,S).
 holds(A,S) :- restoreSitArg(A,S,F), !, F.
 holds(A,_S) :- !, A.
 

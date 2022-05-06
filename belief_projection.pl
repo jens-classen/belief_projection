@@ -6,8 +6,8 @@ are nondeterministic, and whose sensing is fallible, as described in
 the paper
 
 Jens Claßen and James P. Delgrande: Projection of Belief in the
- Presence of Nondeterministic Actions and Fallible Sensing. Submitted
- for review to the 19th International Conference on Principles of
+ Presence of Nondeterministic Actions and Fallible Sensing. In
+ Proceedings of the 19th International Conference on Principles of
  Knowledge Representation and Reasoning (KR 2022).
 
 Although self-contained, this implementation is intended to be

@@ -221,11 +221,15 @@ print_query_result(Q) :- !,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 regression_example :-
+        writeln('\nRegression example:'),
+        writeln('-------------------'),
         forall(member(S,[s0,do(dip,s0),do(sW(ok),do(dip,s0))]),
                forall(member(F,[litmus,acid,(-red)&(-blue)]),
                       print_query_result(bel(F,S)))).
 
 progression_example :-
+        writeln('\nProgression example:'),
+        writeln('--------------------'),
         print_current_state,
         progress(dip),
         print_current_state,

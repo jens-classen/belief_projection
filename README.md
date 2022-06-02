@@ -24,6 +24,6 @@ x86_64-linux).
 
 To run the program, simply call the goal
 
-   ?- run.
+    ?- run.
 
 and observe the output for the regression and progression examples.

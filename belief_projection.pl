@@ -216,26 +216,38 @@ print_query_result(Q) :-
 print_query_result(Q) :- !,
         writef('%t: false\n', [Q]).
 
+% first situation argument is subhistory of second situation argument
+subhistory(S1,do(_,S2)) :-
+        subhistory(S1,S2).
+subhistory(S,S).
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Run Examples
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-regression_example :-
-        writeln('\nRegression example:'),
-        writeln('-------------------'),
-        forall(member(S,[s0,do(dip,s0),do(sW(ok),do(dip,s0))]),
-               forall(member(F,[litmus,acid,(-red)&(-blue)]),
+example_sequence(do(sW(ok),do(dip,s0))).
+example_queries([litmus,acid,(-red)&(-blue)]).
+
+regression_example(Sequence,Queries) :-
+        forall(subhistory(S,Sequence),
+               forall(member(F,Queries),
                       print_query_result(bel(F,S)))).
 
-progression_example :-
-        writeln('\nProgression example:'),
-        writeln('--------------------'),
-        print_current_state,
-        progress(dip),
-        print_current_state,
-        progress(sW(ok)),
+progression_example(s0) :-
+        print_current_state.
+progression_example(do(A,S)) :-
+        progression_example(S),
+        progress(A),
         print_current_state.
 
 run :-
-        regression_example,
-        progression_example.
+        example_sequence(Sequence),
+        example_queries(Queries),
+        
+        writeln('\nRegression example:'),
+        writeln('-------------------'),
+        regression_example(Sequence,Queries),
+        
+        writeln('\nProgression example:'),
+        writeln('--------------------'),
+        progression_example(Sequence).

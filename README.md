@@ -13,8 +13,8 @@ described in the paper
 Although self-contained, this implementation is intended to be
 compatible with the [interpreter][1] presented in the [textbook][2]
 
-Raymond Reiter: Knowledge in Action - Logical Foundations for
-Specifying and Implementing Dynamical Systems. MIT Press, 2001.
+> Raymond Reiter: Knowledge in Action - Logical Foundations for
+> Specifying and Implementing Dynamical Systems. MIT Press, 2001.
 
 [1]: http://www.cs.toronto.edu/cogrobo/kia/
 [2]: https://mitpress.mit.edu/books/knowledge-action

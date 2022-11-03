@@ -3,12 +3,14 @@
 This repository is a prototype implementation of the projection
 methods and examples for a Situation Calculus framework of an agent
 whose actions are nondeterministic, and whose sensing is fallible, as
-described in the paper
+described in the [paper][3]
 
 > Jens Claßen and James P. Delgrande: Projection of Belief in the
 > Presence of Nondeterministic Actions and Fallible Sensing. In
 > Proceedings of the 19th International Conference on Principles of
 > Knowledge Representation and Reasoning (KR 2022).
+
+[3] https://proceedings.kr.org/2022/40/
 
 Although self-contained, this implementation is intended to be
 compatible with the [interpreter][1] presented in the [textbook][2]

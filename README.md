@@ -10,7 +10,7 @@ described in the [paper][3]
 > Proceedings of the 19th International Conference on Principles of
 > Knowledge Representation and Reasoning (KR 2022).
 
-[3] https://proceedings.kr.org/2022/40/
+[3]: https://proceedings.kr.org/2022/40/
 
 Although self-contained, this implementation is intended to be
 compatible with the [interpreter][1] presented in the [textbook][2]
